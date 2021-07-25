@@ -1,4 +1,4 @@
-This project demonstrates the working of admin-user project.
+This project demonstrates the working of admin-user system.
 The steps to run the project is as follows:
 1)Install WAMP server on your PC.
 2)Configure the SMTP mail settings
