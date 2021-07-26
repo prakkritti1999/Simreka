@@ -4,7 +4,18 @@
     session_start();
     
     $error=' ';
+    $count=0;
     if(isset($_POST['signUp'])){
+        
+        //Notifying the admin about the new user
+        $count=$count+1; //count variable keeps track of signed up users
+        
+        $admin_count_query=  mysqli_query($connect,"select * from users");
+        $num_users=  mysqli_num_rows($admin_count_query);
+        
+        $admin_body="A new user has signed up. Total users are ".($num_users +$count);
+        
+        mail("prakriti.guptta@gmail.com","New User",$admin_body,"From :Simreka");
         
         //DECLARING THE VARIABLES
         $_SESSION['firstName']=$_POST['fname'];
