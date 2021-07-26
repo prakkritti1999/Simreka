@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 26, 2021 at 03:17 AM
+-- Generation Time: Jul 26, 2021 at 07:32 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `users_permission`;
 CREATE TABLE IF NOT EXISTS `users_permission` (
   `email` varchar(255) NOT NULL,
-  `is_permission` int(11) DEFAULT NULL,
+  `is_permission` varchar(11) DEFAULT NULL,
   PRIMARY KEY (`email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -40,10 +40,12 @@ CREATE TABLE IF NOT EXISTS `users_permission` (
 --
 
 INSERT INTO `users_permission` (`email`, `is_permission`) VALUES
-('prakriti.guptta@gmail.com', 1),
-('priyanka.chauhan@yahoo.com', 1);
+('mathur_suraj@hotmail.in', 'yes'),
+('smrititayal@gmail.com', 'yes'),
+('priyanka.chauhan@yahoo.com', 'yes');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
