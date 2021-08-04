@@ -3,7 +3,7 @@
     mysqli_select_db($connect, "simreka");
     $email=$_GET['email'];
     
-    //if the admin has disapproved the user,then no=0;
+    //if the admin has disapproved the user,then no='no';
     $no='no';
     
     $approvalchk_query=  mysqli_query($connect, "select * from users_permission where email='$email'");
