@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
     if($row['email']!=$email){
         echo '<script>alert("You dont have access to the system,please sign up with your official email ID to request access"); window.location="SignUp.php"; </script>';
     }
-    else if($row['is_permission']==0){
+    else if($row['is_permission']=='no'){
         echo '<script>alert("You are not approved to view this content, please email the concerned person for approval"); window.location="LOGIN.php"; </script>';
     }
     else if($password_row['password']!=$pass){
